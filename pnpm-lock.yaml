@@ -2,6 +2,8 @@ lockfileVersion: 5.3
 
 specifiers:
   '@napi-rs/uuid': ^0.1.0
+  '@swc-node/jest': ^1.4.1
+  '@types/jest': ^27.0.3
   benny: ^3.7.1
   jest: ^27.3.1
   nanoid: ^3.1.30
@@ -13,6 +15,8 @@ dependencies:
   '@napi-rs/uuid': registry.npmmirror.com/@napi-rs/uuid/0.1.0
 
 devDependencies:
+  '@swc-node/jest': registry.npmmirror.com/@swc-node/jest/1.4.1
+  '@types/jest': registry.npmmirror.com/@types/jest/27.0.3
   benny: registry.npmmirror.com/benny/3.7.1
   jest: registry.npmmirror.com/jest/27.3.1_ts-node@10.4.0
   nanoid: registry.npmmirror.com/nanoid/3.1.30
@@ -229,7 +233,6 @@ packages:
     resolution: {integrity: sha1-dtbQw/TRYBPGHkXfyl/x5sMa5Tw=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/@napi-rs/triples/download/@napi-rs/triples-1.0.3.tgz}
     name: '@napi-rs/triples'
     version: 1.0.3
-    dev: false
 
   registry.nlark.com/@node-rs/helper/1.2.1:
     resolution: {integrity: sha1-4HmwXyH/QynYLE4fccApDk7Nxww=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/@node-rs/helper/download/@node-rs/helper-1.2.1.tgz}
@@ -237,7 +240,6 @@ packages:
     version: 1.2.1
     dependencies:
       '@napi-rs/triples': registry.nlark.com/@napi-rs/triples/1.0.3
-    dev: false
 
   registry.nlark.com/@sinonjs/commons/1.8.3:
     resolution: {integrity: sha1-OALd0hpQqUm2ch3dcto25n5/Gy0=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/@sinonjs/commons/download/@sinonjs/commons-1.8.3.tgz}
@@ -660,13 +662,6 @@ packages:
     name: delayed-stream
     version: 1.0.0
     engines: {node: '>=0.4.0'}
-    dev: true
-
-  registry.nlark.com/diff-sequences/27.0.6:
-    resolution: {integrity: sha1-MwXLLlWgM5JAVGlcxmAZ/X+OVyM=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/diff-sequences/download/diff-sequences-27.0.6.tgz}
-    name: diff-sequences
-    version: 27.0.6
-    engines: {node: ^10.13.0 || ^12.13.0 || ^14.15.0 || >=15.0.0}
     dev: true
 
   registry.nlark.com/diff/4.0.2:
@@ -2415,12 +2410,314 @@ packages:
       '@napi-rs/uuid-win32-x64-msvc': registry.npmmirror.com/@napi-rs/uuid-win32-x64-msvc/0.1.0
     dev: false
 
+  registry.npmmirror.com/@node-rs/xxhash-android-arm64/1.0.1:
+    resolution: {integrity: sha512-w9cIPIzSVjMrsZYpg4jqS4VmqEIWdXtteCO3jO0/RU4wF5aDO0UMYsYVMgWnnq8zLY2xpDOHpw9z+jlI2C8axA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@node-rs/xxhash-android-arm64/download/@node-rs/xxhash-android-arm64-1.0.1.tgz}
+    name: '@node-rs/xxhash-android-arm64'
+    version: 1.0.1
+    engines: {node: '>= 12'}
+    cpu: [arm64]
+    os: [android]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/@node-rs/xxhash-darwin-arm64/1.0.1:
+    resolution: {integrity: sha512-tMllwdYgnEJUJD3Gn2ahrT3R4TI8OH11oyrjpSDVdh0TZsrEiqN2WMUFgEB1nEeowujmIBhGDDb1RnwcPCCCdA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@node-rs/xxhash-darwin-arm64/download/@node-rs/xxhash-darwin-arm64-1.0.1.tgz}
+    name: '@node-rs/xxhash-darwin-arm64'
+    version: 1.0.1
+    engines: {node: '>= 12'}
+    cpu: [arm64]
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/@node-rs/xxhash-darwin-x64/1.0.1:
+    resolution: {integrity: sha512-W2bwfoPYgbNuaLfBCbxdCLTZCddLwb0rOeocbxCeZukX2OaPfTzkuexd21yaWrsesateCHhR7M+JcvqsMzqv6Q==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@node-rs/xxhash-darwin-x64/download/@node-rs/xxhash-darwin-x64-1.0.1.tgz}
+    name: '@node-rs/xxhash-darwin-x64'
+    version: 1.0.1
+    engines: {node: '>= 12'}
+    cpu: [x64]
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/@node-rs/xxhash-linux-arm-gnueabihf/1.0.1:
+    resolution: {integrity: sha512-Igt8xVHj4Qzog+CgZO2b5asyVLQjAt3eojW9c3Oyi8TlMJUuLu/q7q+c0piKirD5BngBq5zOKMEJbCbawWMc8A==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@node-rs/xxhash-linux-arm-gnueabihf/download/@node-rs/xxhash-linux-arm-gnueabihf-1.0.1.tgz}
+    name: '@node-rs/xxhash-linux-arm-gnueabihf'
+    version: 1.0.1
+    engines: {node: '>= 12'}
+    cpu: [arm]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/@node-rs/xxhash-linux-arm64-musl/1.0.1:
+    resolution: {integrity: sha512-li9o0bDEnY1RefDuJkhWEk/4hAk4ojAsR6+auzYbTY3xLgp5+JWPMzvqGw/YwlvyAS7UGrkRo1nyfW/Nyen9jA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@node-rs/xxhash-linux-arm64-musl/download/@node-rs/xxhash-linux-arm64-musl-1.0.1.tgz}
+    name: '@node-rs/xxhash-linux-arm64-musl'
+    version: 1.0.1
+    engines: {node: '>= 12'}
+    cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/@node-rs/xxhash-linux-x64-gnu/1.0.1:
+    resolution: {integrity: sha512-UAaB1Gc28oup9BsiHCjGglfFtWJie+KVMpfdS4Ko4lZJY6SITPb+3KDHUKieKJGW2SLp1J3FR1v/Ut/ehZ0jQQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@node-rs/xxhash-linux-x64-gnu/download/@node-rs/xxhash-linux-x64-gnu-1.0.1.tgz}
+    name: '@node-rs/xxhash-linux-x64-gnu'
+    version: 1.0.1
+    engines: {node: '>= 12'}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/@node-rs/xxhash-linux-x64-musl/1.0.1:
+    resolution: {integrity: sha512-Ailcrvvoj/St/puyTtqzu6q+zVJSNFmo+ekiCAUcezq+pLeedYPsA5roQ6rCeUiiF+PovBryQXPuHPbxgAtIxw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@node-rs/xxhash-linux-x64-musl/download/@node-rs/xxhash-linux-x64-musl-1.0.1.tgz}
+    name: '@node-rs/xxhash-linux-x64-musl'
+    version: 1.0.1
+    engines: {node: '>= 12'}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/@node-rs/xxhash-win32-arm64-msvc/1.0.1:
+    resolution: {integrity: sha512-tLPFVDKNaZ2NrSPPZtxHsh+h4OWRVjuSR0hWO93s/Sn4TKnLv11I6HakBarwQUReYsyav/0aCilWHIjH1DP28w==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@node-rs/xxhash-win32-arm64-msvc/download/@node-rs/xxhash-win32-arm64-msvc-1.0.1.tgz}
+    name: '@node-rs/xxhash-win32-arm64-msvc'
+    version: 1.0.1
+    engines: {node: '>= 12'}
+    cpu: [arm64]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/@node-rs/xxhash-win32-ia32-msvc/1.0.1:
+    resolution: {integrity: sha512-2BTLG1FKAwrBEU+9NHwhQA5hCXlLi/p8UusHUeBy8rzhkX6C+xtGfUCRhgJPrSGZp+LoEHlphavbGZ+hUt/taw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@node-rs/xxhash-win32-ia32-msvc/download/@node-rs/xxhash-win32-ia32-msvc-1.0.1.tgz}
+    name: '@node-rs/xxhash-win32-ia32-msvc'
+    version: 1.0.1
+    engines: {node: '>= 12'}
+    cpu: [ia32]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/@node-rs/xxhash-win32-x64-msvc/1.0.1:
+    resolution: {integrity: sha512-mQev+YV+6bFWq43RQsgLfg1x19COrkhGTYpskOFdiitlJoeyMsQGOE2AdtztwPlXOF7oAN8gg6x12KWf4gxhKw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@node-rs/xxhash-win32-x64-msvc/download/@node-rs/xxhash-win32-x64-msvc-1.0.1.tgz}
+    name: '@node-rs/xxhash-win32-x64-msvc'
+    version: 1.0.1
+    engines: {node: '>= 12'}
+    cpu: [x64]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/@node-rs/xxhash/1.0.1:
+    resolution: {integrity: sha512-IYb5vx36csK0TFtyl/pSuoSXiT1qj/PtPCItk30qdFDMoDgwJzvcPohFugEVn4Bvxc7aBDTjo25CGLtnu96lNQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@node-rs/xxhash/download/@node-rs/xxhash-1.0.1.tgz}
+    name: '@node-rs/xxhash'
+    version: 1.0.1
+    engines: {node: '>= 12'}
+    dependencies:
+      '@node-rs/helper': registry.nlark.com/@node-rs/helper/1.2.1
+    optionalDependencies:
+      '@node-rs/xxhash-android-arm64': registry.npmmirror.com/@node-rs/xxhash-android-arm64/1.0.1
+      '@node-rs/xxhash-darwin-arm64': registry.npmmirror.com/@node-rs/xxhash-darwin-arm64/1.0.1
+      '@node-rs/xxhash-darwin-x64': registry.npmmirror.com/@node-rs/xxhash-darwin-x64/1.0.1
+      '@node-rs/xxhash-linux-arm-gnueabihf': registry.npmmirror.com/@node-rs/xxhash-linux-arm-gnueabihf/1.0.1
+      '@node-rs/xxhash-linux-arm64-musl': registry.npmmirror.com/@node-rs/xxhash-linux-arm64-musl/1.0.1
+      '@node-rs/xxhash-linux-x64-gnu': registry.npmmirror.com/@node-rs/xxhash-linux-x64-gnu/1.0.1
+      '@node-rs/xxhash-linux-x64-musl': registry.npmmirror.com/@node-rs/xxhash-linux-x64-musl/1.0.1
+      '@node-rs/xxhash-win32-arm64-msvc': registry.npmmirror.com/@node-rs/xxhash-win32-arm64-msvc/1.0.1
+      '@node-rs/xxhash-win32-ia32-msvc': registry.npmmirror.com/@node-rs/xxhash-win32-ia32-msvc/1.0.1
+      '@node-rs/xxhash-win32-x64-msvc': registry.npmmirror.com/@node-rs/xxhash-win32-x64-msvc/1.0.1
+    dev: true
+
   registry.npmmirror.com/@sinonjs/fake-timers/8.1.0:
     resolution: {integrity: sha1-P9wrbLWJNbIb+40WJesTAEhDFuc=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@sinonjs/fake-timers/download/@sinonjs/fake-timers-8.1.0.tgz?cache=0&sync_timestamp=1635950807077&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2F%40sinonjs%2Ffake-timers%2Fdownload%2F%40sinonjs%2Ffake-timers-8.1.0.tgz}
     name: '@sinonjs/fake-timers'
     version: 8.1.0
     dependencies:
       '@sinonjs/commons': registry.nlark.com/@sinonjs/commons/1.8.3
+    dev: true
+
+  registry.npmmirror.com/@swc-node/core/1.8.0:
+    resolution: {integrity: sha512-oolF9LG4GP6NhUMWqGi2bDomE3v0CYmNl/kJN2+Hh+iYLdv7l36B0GWFGLnSnq0sWyjrp+1Ur7MZTZFGnK1a3w==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@swc-node/core/download/@swc-node/core-1.8.0.tgz}
+    name: '@swc-node/core'
+    version: 1.8.0
+    engines: {node: '>= 10'}
+    dependencies:
+      '@swc/core': registry.npmmirror.com/@swc/core/1.2.114
+    dev: true
+
+  registry.npmmirror.com/@swc-node/jest/1.4.1:
+    resolution: {integrity: sha512-Rv1Pt8T+kbj2QYB5uzOgKGTfbVXswa5VV5Es/RM42mu3qy2LerAW0J7mhttFDBGTvtN/ztTjcCpS601+vgULmg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@swc-node/jest/download/@swc-node/jest-1.4.1.tgz}
+    name: '@swc-node/jest'
+    version: 1.4.1
+    dependencies:
+      '@node-rs/xxhash': registry.npmmirror.com/@node-rs/xxhash/1.0.1
+      '@swc-node/core': registry.npmmirror.com/@swc-node/core/1.8.0
+    dev: true
+
+  registry.npmmirror.com/@swc/core-android-arm64/1.2.114:
+    resolution: {integrity: sha512-vMPUM1VWARtfXnMaFHEK49XMfst7XbLoV8FccDGP0twkLZGjfzsnOArZ5zSLw85bEWeRYR1Cf5A2DpTT+xfS8A==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@swc/core-android-arm64/download/@swc/core-android-arm64-1.2.114.tgz}
+    name: '@swc/core-android-arm64'
+    version: 1.2.114
+    engines: {node: '>=10'}
+    cpu: [arm64]
+    os: [android]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/@swc/core-darwin-arm64/1.2.114:
+    resolution: {integrity: sha512-ZAVHT2U8NpNeCYtlwiiHsrg36Sz4pE3fzKw5s0L8xLKeDwHFJT5Rn40pO4/hGR/NikIOG6fxeZplsur2ooRbyA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@swc/core-darwin-arm64/download/@swc/core-darwin-arm64-1.2.114.tgz}
+    name: '@swc/core-darwin-arm64'
+    version: 1.2.114
+    engines: {node: '>=10'}
+    cpu: [arm64]
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/@swc/core-darwin-x64/1.2.114:
+    resolution: {integrity: sha512-WNc18L//6NlqxNZQz4ePEa9jwIIcg+81m4MNZ2EuGtlp53jrTgCGeJWGRL93FVjnCyruLhuXdInVFhnv6u0ygg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@swc/core-darwin-x64/download/@swc/core-darwin-x64-1.2.114.tgz}
+    name: '@swc/core-darwin-x64'
+    version: 1.2.114
+    engines: {node: '>=10'}
+    cpu: [x64]
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/@swc/core-freebsd-x64/1.2.114:
+    resolution: {integrity: sha512-1zrKf6S82c2aE60gBROT0GWVQ/+3s31CJtiqd9acUG4qIoT/8uF8D5wjy8v/DjJRGmK6Yo2bSiil//QBd2WGOA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@swc/core-freebsd-x64/download/@swc/core-freebsd-x64-1.2.114.tgz}
+    name: '@swc/core-freebsd-x64'
+    version: 1.2.114
+    engines: {node: '>=10'}
+    cpu: [x64]
+    os: [freebsd]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/@swc/core-linux-arm-gnueabihf/1.2.114:
+    resolution: {integrity: sha512-UqWCA451hNmZEE7ZM7s8g4TLLQytuGs7+h/2LIJf9uQXHeScFF9IN4I0+O1n4nokpbU1cV7gBvHDk1ATin/ZRQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@swc/core-linux-arm-gnueabihf/download/@swc/core-linux-arm-gnueabihf-1.2.114.tgz}
+    name: '@swc/core-linux-arm-gnueabihf'
+    version: 1.2.114
+    engines: {node: '>=10'}
+    cpu: [arm]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/@swc/core-linux-arm64-gnu/1.2.114:
+    resolution: {integrity: sha512-V68S1YuIOrYWmJ/2d69Mcis7cow/qSQmInbQu104pb7o9zIpMtaRhk/pRc+iA5ZC5XZCCsn7rRl9GQRUcdx5vw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@swc/core-linux-arm64-gnu/download/@swc/core-linux-arm64-gnu-1.2.114.tgz}
+    name: '@swc/core-linux-arm64-gnu'
+    version: 1.2.114
+    engines: {node: '>=10'}
+    cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/@swc/core-linux-arm64-musl/1.2.114:
+    resolution: {integrity: sha512-gbliomP3DDULpfLm5s1YGwNQaiEm5rg+1ZMVxKWOtVPNtWiGDa4WJoFmN/5pHHqxzJ2cUH/3AoV9HEDrmUju/Q==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@swc/core-linux-arm64-musl/download/@swc/core-linux-arm64-musl-1.2.114.tgz}
+    name: '@swc/core-linux-arm64-musl'
+    version: 1.2.114
+    engines: {node: '>=10'}
+    cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/@swc/core-linux-x64-gnu/1.2.114:
+    resolution: {integrity: sha512-RbsZYCp7BodlbckiCYRvblHCabkHnTcrjT4ZYtDBuR9BLWWUPAs3RAdN0fHN9Lts3gpPuV3fd2R02nZEAZS6Sg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@swc/core-linux-x64-gnu/download/@swc/core-linux-x64-gnu-1.2.114.tgz}
+    name: '@swc/core-linux-x64-gnu'
+    version: 1.2.114
+    engines: {node: '>=10'}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/@swc/core-linux-x64-musl/1.2.114:
+    resolution: {integrity: sha512-Sa7/q+BFh26y9MWAgDJAqUAmP1TGGPmkfS9qFxuJfrA143tRJWaAHPGmd4XaFTPk7MmaYIMK9Fm8rY5RF9UQbA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@swc/core-linux-x64-musl/download/@swc/core-linux-x64-musl-1.2.114.tgz}
+    name: '@swc/core-linux-x64-musl'
+    version: 1.2.114
+    engines: {node: '>=10'}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/@swc/core-win32-arm64-msvc/1.2.114:
+    resolution: {integrity: sha512-63KkG7Css6wr2BhKV5P4aj2k+5LnDFli5unGJl7Ijw0w5JXRrYi0agbiekRJbE+DNVgUs7buiApH0pF9M9rMAQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@swc/core-win32-arm64-msvc/download/@swc/core-win32-arm64-msvc-1.2.114.tgz}
+    name: '@swc/core-win32-arm64-msvc'
+    version: 1.2.114
+    engines: {node: '>=10'}
+    cpu: [arm64]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/@swc/core-win32-ia32-msvc/1.2.114:
+    resolution: {integrity: sha512-ImO+PaMugSKgp87M5cnUigguT05caWm/XNKuFASmoyGYi3vPbFljItj/CwtBlY/B/q0hC6EomyrNvMNvqEgFEw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@swc/core-win32-ia32-msvc/download/@swc/core-win32-ia32-msvc-1.2.114.tgz}
+    name: '@swc/core-win32-ia32-msvc'
+    version: 1.2.114
+    engines: {node: '>=10'}
+    cpu: [ia32]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/@swc/core-win32-x64-msvc/1.2.114:
+    resolution: {integrity: sha512-8fM9LLC+I0PjIhXP+zcrrFxyA1seE0ZohBV+7XRfGKmLMqThBAl8H+vcqpkyVqTzZ6Ug9jKgJ8pa0hWb9ehhwA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@swc/core-win32-x64-msvc/download/@swc/core-win32-x64-msvc-1.2.114.tgz}
+    name: '@swc/core-win32-x64-msvc'
+    version: 1.2.114
+    engines: {node: '>=10'}
+    cpu: [x64]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  registry.npmmirror.com/@swc/core/1.2.114:
+    resolution: {integrity: sha512-eu2API8gphmvvgRinQNF+PTO7FngdKZA1Q++eZeoYkF6GH3wxTDl5fU1j6WsADgcglziS27t0qJ48RoJqLTPIA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@swc/core/download/@swc/core-1.2.114.tgz}
+    name: '@swc/core'
+    version: 1.2.114
+    engines: {node: '>=10'}
+    dependencies:
+      '@node-rs/helper': registry.nlark.com/@node-rs/helper/1.2.1
+    optionalDependencies:
+      '@swc/core-android-arm64': registry.npmmirror.com/@swc/core-android-arm64/1.2.114
+      '@swc/core-darwin-arm64': registry.npmmirror.com/@swc/core-darwin-arm64/1.2.114
+      '@swc/core-darwin-x64': registry.npmmirror.com/@swc/core-darwin-x64/1.2.114
+      '@swc/core-freebsd-x64': registry.npmmirror.com/@swc/core-freebsd-x64/1.2.114
+      '@swc/core-linux-arm-gnueabihf': registry.npmmirror.com/@swc/core-linux-arm-gnueabihf/1.2.114
+      '@swc/core-linux-arm64-gnu': registry.npmmirror.com/@swc/core-linux-arm64-gnu/1.2.114
+      '@swc/core-linux-arm64-musl': registry.npmmirror.com/@swc/core-linux-arm64-musl/1.2.114
+      '@swc/core-linux-x64-gnu': registry.npmmirror.com/@swc/core-linux-x64-gnu/1.2.114
+      '@swc/core-linux-x64-musl': registry.npmmirror.com/@swc/core-linux-x64-musl/1.2.114
+      '@swc/core-win32-arm64-msvc': registry.npmmirror.com/@swc/core-win32-arm64-msvc/1.2.114
+      '@swc/core-win32-ia32-msvc': registry.npmmirror.com/@swc/core-win32-ia32-msvc/1.2.114
+      '@swc/core-win32-x64-msvc': registry.npmmirror.com/@swc/core-win32-x64-msvc/1.2.114
     dev: true
 
   registry.npmmirror.com/@tootallnate/once/1.1.2:
@@ -2495,6 +2792,15 @@ packages:
     version: 3.0.1
     dependencies:
       '@types/istanbul-lib-report': registry.npmmirror.com/@types/istanbul-lib-report/3.0.0
+    dev: true
+
+  registry.npmmirror.com/@types/jest/27.0.3:
+    resolution: {integrity: sha512-cmmwv9t7gBYt7hNKH5Spu7Kuu/DotGa+Ff+JGRKZ4db5eh8PnKS4LuebJ3YLUoyOyIHraTGyULn23YtEAm0VSg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/jest/download/@types/jest-27.0.3.tgz?cache=0&sync_timestamp=1637300511391&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2F%40types%2Fjest%2Fdownload%2F%40types%2Fjest-27.0.3.tgz}
+    name: '@types/jest'
+    version: 27.0.3
+    dependencies:
+      jest-diff: registry.npmmirror.com/jest-diff/27.3.1
+      pretty-format: registry.npmmirror.com/pretty-format/27.3.1
     dev: true
 
   registry.npmmirror.com/@types/node/16.11.10:
@@ -2707,6 +3013,13 @@ packages:
     name: detect-newline
     version: 3.1.0
     engines: {node: '>=8'}
+    dev: true
+
+  registry.npmmirror.com/diff-sequences/27.0.6:
+    resolution: {integrity: sha1-MwXLLlWgM5JAVGlcxmAZ/X+OVyM=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/diff-sequences/download/diff-sequences-27.0.6.tgz}
+    name: diff-sequences
+    version: 27.0.6
+    engines: {node: ^10.13.0 || ^12.13.0 || ^14.15.0 || >=15.0.0}
     dev: true
 
   registry.npmmirror.com/domexception/2.0.1:
@@ -3020,13 +3333,13 @@ packages:
     dev: true
 
   registry.npmmirror.com/jest-diff/27.3.1:
-    resolution: {integrity: sha1-0ndf6hVBH19a7aKl4CwvNkQPbVU=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/jest-diff/download/jest-diff-27.3.1.tgz?cache=0&sync_timestamp=1634626979760&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fjest-diff%2Fdownload%2Fjest-diff-27.3.1.tgz}
+    resolution: {integrity: sha1-0ndf6hVBH19a7aKl4CwvNkQPbVU=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/jest-diff/download/jest-diff-27.3.1.tgz}
     name: jest-diff
     version: 27.3.1
     engines: {node: ^10.13.0 || ^12.13.0 || ^14.15.0 || >=15.0.0}
     dependencies:
       chalk: registry.npmmirror.com/chalk/4.1.2
-      diff-sequences: registry.nlark.com/diff-sequences/27.0.6
+      diff-sequences: registry.npmmirror.com/diff-sequences/27.0.6
       jest-get-type: registry.npmmirror.com/jest-get-type/27.3.1
       pretty-format: registry.npmmirror.com/pretty-format/27.3.1
     dev: true
@@ -3557,7 +3870,7 @@ packages:
     dev: true
 
   registry.npmmirror.com/pretty-format/27.3.1:
-    resolution: {integrity: sha1-fpSGNlzN1KUCBh+nYdOrnKG3jfU=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/pretty-format/download/pretty-format-27.3.1.tgz?cache=0&sync_timestamp=1634626978157&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fpretty-format%2Fdownload%2Fpretty-format-27.3.1.tgz}
+    resolution: {integrity: sha1-fpSGNlzN1KUCBh+nYdOrnKG3jfU=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/pretty-format/download/pretty-format-27.3.1.tgz}
     name: pretty-format
     version: 27.3.1
     engines: {node: ^10.13.0 || ^12.13.0 || ^14.15.0 || >=15.0.0}
