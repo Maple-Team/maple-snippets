@@ -1,5 +1,10 @@
 // https://gist.github.com/xperiments/5965154#file-arraybuffer2base64-js
-function base64ArrayBuffer(arrayBuffer) {
+/**
+ * ArrayBuffer转Base64
+ * @param arrayBuffer
+ * @returns
+ */
+export function base64ArrayBuffer(arrayBuffer: number) {
   var base64 = "";
   var encodings =
     "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
