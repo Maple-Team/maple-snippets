@@ -1,11 +1,25 @@
-//@ https://gist.github.com/Robert-Ro/61369e81b8977b588ac0269feded2785
-// https://mp.weixin.qq.com/s/7CD_F0hEZtYRK0fvBWb_gQ
+//@https://gist.github.com/Robert-Ro/61369e81b8977b588ac0269feded2785
+/**
+ * 防抖函数
+ * @param func
+ * @param delay
+ * @param options
+ * @returns the new debounced function.
+ */
 export function debounce(
-  func: (...args: unknown[]) => unknown,
+  func: Function,
   delay: number = 1000,
-  immediate:boolean
-): (...args: unknown[]) => unknown {
-  return () => {};
+  options?: { leading: boolean; trailing: boolean; maxWait: number }
+): Function {
+  let timerId;
+  return function debounce(this: unknown, ...args: unknown[]) {
+    clearTimeout(timerId);
+    const delayFn = () => {
+      if (!options.leading) func.apply(this, args);
+    };
+    timerId = setTimeout(delayFn, delay);
+    if (options.leading && !timerId) func.apply(this, args);
+  };
 }
 export function throttle(
   func: (...args: unknown[]) => unknown,
