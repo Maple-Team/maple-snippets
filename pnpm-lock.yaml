@@ -7,6 +7,7 @@ specifiers:
   '@types/node': ^17.0.40
   benny: ^3.7.1
   jest: ^27.3.1
+  lodash-es: ^4.17.21
   nanoid: ^3.1.30
   ts-node: ^10.4.0
   typescript: ^4.5.2
@@ -21,6 +22,7 @@ devDependencies:
   '@types/node': 17.0.40
   benny: registry.npmmirror.com/benny/3.7.1
   jest: registry.npmmirror.com/jest/27.3.1_ts-node@10.4.0
+  lodash-es: 4.17.21
   nanoid: registry.npmmirror.com/nanoid/3.1.30
   ts-node: registry.npmmirror.com/ts-node/10.4.0_nhdixcm4kfpmviybfdzbltu5se
   typescript: registry.npmmirror.com/typescript/4.5.2
@@ -373,6 +375,10 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /lodash-es/4.17.21:
+    resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==}
+    dev: true
 
   /source-map/0.6.1:
     resolution: {integrity: sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==}
