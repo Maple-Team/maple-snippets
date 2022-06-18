@@ -13,6 +13,17 @@
       "outFiles": [
         "${workspaceFolder}/dist/**/*.js"
       ]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "es6 debugger",
+      "program": "${file}",
+      "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/babel-node",
+      "sourceMaps": true,
+      "env": {
+        "BABEL_ENV": "debug"
+      }
     }
   ]
 }
