@@ -7,9 +7,5 @@
     "outDir": "dist",
     "sourceMap": true,
     "skipLibCheck": true,
-    "allowJs": true,
   },
-  "include": [
-    "src/**/*.ts"
-  ]
 }
