@@ -19,8 +19,12 @@
   },
   "homepage": "https://github.com/Maple-Team/maple-snippets#readme",
   "devDependencies": {
+    "@liutsing/eslint-config": "^0.0.10",
+    "@liutsing/prettier-config": "^0.0.6",
+    "@liutsing/tsconfig": "^0.0.6",
     "@swc-node/jest": "^1.4.1",
     "@types/jest": "^27.0.3",
+    "@types/lodash-es": "^4.17.7",
     "@types/node": "^17.0.40",
     "benny": "^3.7.1",
     "jest": "^27.3.1",
@@ -31,6 +35,11 @@
     "uuid": "^8.3.2"
   },
   "dependencies": {
-    "@napi-rs/uuid": "^0.1.0"
-  }
+    "@napi-rs/uuid": "^0.1.0",
+    "@types/react": "^18.2.8",
+    "@types/react-dom": "^18.2.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "prettier": "@liutsing/prettier-config"
 }

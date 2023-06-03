@@ -5,3 +5,5 @@
 ## Resources
 
 - [benny](https://github.com/caderek/benny), A dead simple benchmarking framework for JS/TS libs
+## projects
+- https://github.com/dashed/shallowequal#readme

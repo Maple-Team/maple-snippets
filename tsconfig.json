@@ -1,11 +1,3 @@
 {
-  "compilerOptions": {
-    "module": "commonjs",
-    "target": "es5",
-    "rootDir": ".",
-    "moduleResolution": "node",
-    "outDir": "dist",
-    "sourceMap": true,
-    "skipLibCheck": true,
-  },
+  "extends":"@liutsing/tsconfig"
 }
